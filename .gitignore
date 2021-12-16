@@ -1,0 +1,8 @@
+# IntelliJ
+.idea
+
+# compiled
+build
+
+# Gradle dependencies
+.gradle

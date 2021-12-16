@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.1'
+}
+
+group 'com.blairnangle'
+version '1.0-SNAPSHOT'
+
+def springBootVersion = '2.6.1'
+def junitVersion = '5.8.2'
+def lombokVersion = '1.18.22'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(
+            "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+            "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}",
+            "org.projectlombok:lombok:${lombokVersion}",
+            'com.h2database:h2:2.0.202',
+            'javax.xml.bind:jaxb-api:2.3.1'
+    )
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
