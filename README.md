@@ -34,7 +34,7 @@ For example:
 curl --verbose localhost:8080/pizza/1
 ```
 
-### Process pizzaOrder
+### Process order
 
 ```commandline
 curl --request POST localhost:8080/pizza/orders -H "Content-Type: application/json" --data '{"pizzaId": 1, "diameterInInches": 12}' -v
