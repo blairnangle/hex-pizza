@@ -6,6 +6,7 @@ Simple sample application to demonstrate hexagonal architecture.
 
 - Clients can create a new type of pizza with a name and price per square inch
 - Clients can get a pizza type by its id
+- Clients can process an pizzaOrder by providing `pizzaId` and `diameterInInches`
 
 ## Tech
 
@@ -31,4 +32,10 @@ For example:
 
 ```commandline
 curl --verbose localhost:8080/pizza/1
+```
+
+### Process pizzaOrder
+
+```commandline
+curl --request POST localhost:8080/pizza/orders -H "Content-Type: application/json" --data '{"pizzaId": 1, "diameterInInches": 12}' -v
 ```
