@@ -6,7 +6,7 @@ Simple sample application to demonstrate hexagonal architecture.
 
 - Clients can create a new type of pizza with a name and price per square inch
 - Clients can get a pizza type by its id
-- Clients can process an pizzaOrder by providing `pizzaId` and `diameterInInches`
+- Clients can process a pizzaOrder by providing `pizzaId` and `diameterInInches`
 
 ## Tech
 
